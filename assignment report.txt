@@ -1,0 +1,36 @@
+React Project Report
+
+Project Overview
+This project is a React-based web application with the following key components:
+- Counter Component: Allows users to increment, decrement, and reset a counter. The counter value persists even after a page refresh.
+- User Data Form: A form for users to enter their details. It auto-generates a user ID and saves data in `localStorage`. Displays a warning for unsaved changes when trying to leave the page.
+- Rich Text Editor: A text editor that allows users to format and visualize their entered data. Content persists even after a refresh.
+
+Component Structure
+
+1.Counter Component (`Counter.js`)
+- Uses `useState` to manage the count state.
+- Uses `localStorage` to persist the count across page reloads.
+- Uses `react-spring` for background animation.
+- Buttons for increment, decrement, and reset functionalities.
+
+2.User Data Form (`UserDataForm.js`)
+- Uses `useState` to store form data.
+- Auto-generates a unique `userID` when the form is filled.
+- Saves data in `localStorage` to persist user details.
+- Implements a `beforeunload` event to warn users about unsaved changes.
+
+3.Rich Text Editor (`RichTextEditor.js`)
+- Uses `react-draft-wysiwyg` for rich text formatting.
+- Uses `draft-js` to manage text state.
+- Saves editor content in `localStorage` to persist text and formatting.
+
+State Management Choices
+
+- `useState`: Used to manage component states (e.g., count, form data, editor state).
+- `localStorage`: Used for persistent storage so that data is retained after a page refresh.
+- Event Listeners (`beforeunload`): Used in the form to warn users about unsaved changes.
+
+
+This report provides a summary of the component structure and state management choices.
+
